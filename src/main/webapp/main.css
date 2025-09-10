@@ -1,0 +1,178 @@
+.tab-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    width: 50%;          /* 전체 컨테이너 너비 50% */
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0 auto;      /* 가운데 정렬 */
+  }
+
+  .tab-buttons button {
+    flex: 1;             /* 버튼 너비 균등 분배 */
+    padding: 12px 0;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #00c4ff, #008cff);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 140, 255, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .tab-buttons button:not(.active) {
+    background: #f0f4f8;
+    color: #666;
+    box-shadow: none;
+    border: 1.5px solid #ddd;
+  }
+
+  .tab-buttons button:not(.active):hover {
+    background: #e0e8f3;
+    color: #008cff;
+    border-color: #008cff;
+  }
+
+  .tab-buttons button.active {
+    background: linear-gradient(90deg, #00c4ff, #008cff);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 140, 255, 0.6);
+  }
+  /* 예약조회 폼 스타일 */
+  #inquiryForm {
+    max-width: 1100px; /* 넓게 잡음 */
+    margin: 0 auto 40px;
+    padding: 20px 25px;
+    background: #f5faff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 140, 255, 0.1);
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  /* form-fields를 flex container로 설정 */
+  #inquiryForm .form-fields {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    flex-wrap: nowrap; /* 한 줄 유지 */
+  }
+
+  /* 각 입력 그룹 크기 및 정렬 */
+  #inquiryForm .form-group {
+    flex: 1; /* 균등 분배 */
+    min-width: 150px; /* 너무 작아지지 않도록 */
+    display: flex;
+    flex-direction: column;
+  }
+
+  #inquiryForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #007acc;
+    font-size: 0.95rem;
+  }
+
+  #inquiryForm input[type="text"],
+  #inquiryForm input[type="date"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1.8px solid #c6d8f9;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    outline-offset: 2px;
+    height: 38px;
+  }
+
+  #inquiryForm input[type="text"]:focus,
+  #inquiryForm input[type="date"]:focus {
+    border-color: #008cff;
+    box-shadow: 0 0 5px #009dff88;
+  }
+
+  #inquiryForm button.submit-btn {
+    background: linear-gradient(90deg, #00c4ff, #008cff);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0, 140, 255, 0.6);
+    transition: background 0.3s ease;
+  }
+
+  #inquiryForm button.submit-btn:hover {
+    background: linear-gradient(90deg, #007acc, #005fa3);
+  }
+  
+  .recommend-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.recommend-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #008cff;
+  font-weight: 700;
+}
+
+.recommend-list {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,140,255,0.1);
+  width: 32%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 15px 20px;
+}
+
+.route {
+  font-weight: 600;
+  color: #007acc;
+  margin-bottom: 5px;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #005fa3;
+}
+
+.price {
+  font-weight: 700;
+  color: #00aaff;
+  margin-bottom: 5px;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #666;
+}

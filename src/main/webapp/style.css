@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 기본 설정 */
+html, body {
+  height: 100%;
+  width: 100%;
+  min-width: 1024px; /* 최소 폭 지정 */
+  overflow-x: auto;  /* 넘칠 경우 가로 스크롤 허용 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background: #f0f4f8;
+  color: #333;
+}
+
+header {
+  border-bottom: 1px solid #1e40af;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* 로그인 / 회원가입 상단 바 */
+.top-bar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 링크 스타일 */
+.auth-links {
+  display: flex;
+  gap: 12px;
+}
+
+.auth-links a {
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 6px 16px;
+  transition: color 0.3s ease;
+  border-radius: 6px;
+}
+
+.auth-links a:hover {
+  color: black;
+  cursor: pointer;
+  background-color: rgba(255 255 255 / 0.8);
+}
+
+.auth-links .divider {
+  color: white;
+  user-select: none;
+  align-self: center;
+  font-weight: 700;
+}
+
+/* 메뉴 리스트 */
+.list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto 10px auto;
+  max-width: 1200px;
+  justify-content: center;
+  width: 100%;
+}
+
+.list li a {
+  font-size: 18px;
+  text-decoration: none;
+  padding-right: 30px;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.list li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  width: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+.list li a:hover {
+  color: black;
+}
+
+.list li a:hover::after {
+  width: 100%;
+}
+
+/* 반응형 */
+
+/* 1300px 이하에서는 로그인/회원가입 메뉴 가운데 정렬 */
+@media (max-width:1300px) {
+  .top-bar {
+    justify-content: center;
+  }
+}
+
+/* 750px 이하에서는 로그인/회원가입 메뉴 숨김 처리 */
+@media (max-width: 750px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+/* 로그인 패널 스타일 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 500px;
+}
+
+.panel {
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e7ff;
+  text-align: center;
+}
+
+/* 제목 */
+.panel h2 {
+  font-size: 24px;
+  color: #1e3a8a;
+  margin-bottom: 24px;
+}
+
+/* 입력폼 */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input {
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* 버튼 */
+.btn {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0072ff, #0053ba);
+}
+
+/* 회색 외곽선 버튼 */
+.btn-outline {
+  background-color: white;
+  color: #1e3a8a;
+  border: 1px solid #1e3a8a;
+}
+
+.btn-outline:hover {
+  background-color: #e0ecff;
+}
+
+/* 알림 메시지 */
+.alert {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #e0f7ec;
+  color: #065f46;
+  border: 1px solid #34d399;
+}
+
+.alert-error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #f87171;
+}
+
+/* 기타 텍스트 */
+.muted {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.link {
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #1d4ed8;
+}
+
+/* 마진 유틸리티 */
+.mb-16 { margin-bottom: 16px; }
+.mt-16 { margin-top: 16px; }
+
+/* 회원가입 모달 내부 input 정렬 */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* 큰 화면에서 가로 정렬 */
+@media (min-width: 640px) {
+  .form-row {
+    flex-direction: row;
+  }
+}
+
