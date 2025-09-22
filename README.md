@@ -29,56 +29,48 @@
 
 ## 📂 프로젝트 구조
 airline-reservation-system
-┣ src/main/java
-┃ ┣ dao
-┃ ┃ ┗ MemberDAO.java
-┃ ┣ servlet
-┃ ┃ ┣ LoginServlet.java
-┃ ┃ ┣ RegisterServlet.java
-┃ ┃ ┣ ReservationServlet.java
-┃ ┃ ┣ MyReservationsServlet.java
-┃ ┃ ┣ cancelReservation.java
-┃ ┃ ┣ ManageUsersServlet.java
-┃ ┃ ┣ ManageReservationsServlet.java
-┃ ┃ ┣ UpdateProfileServlet.java
-┃ ┃ ┣ DeleteAccountServlet.java
-┃ ┃ ┣ DeleteReservationServlet.java
-┃ ┃ ┣ DeleteUserServlet.java
-┃ ┃ ┣ EditUserServlet.java
-┃ ┃ ┣ InquiryServlet.java
-┃ ┃ ┣ LogoutServlet.java
-┃ ┃ ┣ Member.java
-┃ ┃ ┗ ReservationServlet1.java
-┃ ┣ util
-┃ ┃ ┗ DBUtil.java
-┣ webapp
-┃ ┣ META-INF
-┃ ┣ WEB-INF
-┃ ┃ ┣ AdminDashboard.jsp
-┃ ┃ ┣ EditProfile.jsp
-┃ ┃ ┣ EditUser.jsp
-┃ ┃ ┣ error.html
-┃ ┃ ┣ fail.jsp
-┃ ┃ ┣ flight.jsp / flight_1.css
-┃ ┃ ┣ inquiryForm.jsp
-┃ ┃ ┣ login.jsp / loginsuccess.jsp
-┃ ┃ ┣ main.jsp / main.css
-┃ ┃ ┣ manageReservations.jsp
-┃ ┃ ┣ manageUsers.jsp
-┃ ┃ ┣ my_reservations.jsp
-┃ ┃ ┣ Mypage.jsp
-┃ ┃ ┣ reservation_success.jsp
-┃ ┃ ┣ signup.jsp
-┃ ┃ ┣ style.css
-┃ ┃ ┗ success.jsp / test.css
-┣ sql
-┃ ┗ schema.sql
-┣ docs
-┃ ┣ erd.png
-┃ ┣ schedule.png
-┃ ┗ screenshots/
-┣ README.md
-┗ LICENSE
+ ├ src/main/java
+ │  ├ dao
+ │  │  └ MemberDAO.java
+ │  ├ servlet
+ │  │  ├ LoginServlet.java
+ │  │  ├ RegisterServlet.java
+ │  │  ├ ReservationServlet.java
+ │  │  ├ MyReservationsServlet.java
+ │  │  ├ cancelReservation.java
+ │  │  ├ ManageUsersServlet.java
+ │  │  ├ ManageReservationsServlet.java
+ │  │  ├ UpdateProfileServlet.java
+ │  │  ├ DeleteAccountServlet.java
+ │  │  ├ DeleteReservationServlet.java
+ │  │  ├ DeleteUserServlet.java
+ │  │  ├ EditUserServlet.java
+ │  │  ├ InquiryServlet.java
+ │  │  ├ LogoutServlet.java
+ │  │  ├ Member.java
+ │  │  └ ReservationServlet1.java
+ │  └ util
+ │     └ DBUtil.java
+ ├ webapp
+ │  ├ META-INF
+ │  ├ WEB-INF
+ │  │  ├ AdminDashboard.jsp
+ │  │  ├ EditProfile.jsp
+ │  │  ├ EditUser.jsp
+ │  │  ├ error.html
+ │  │  ├ fail.jsp
+ │  │  ├ flight.jsp
+ │  │  ├ flight_1.css
+ │  │  ├ inquiryForm.jsp
+ │  │  ├ login.jsp
+ │  │  ├ loginsuccess.jsp
+ │  │  ├ main.jsp
+ │  │  ├ main.css
+ │  │  ├ manageReservations.jsp
+ │  │  ├ manageUsers.jsp
+ │  │  ├ my_reservations.jsp
+ │  │  ├ Myp
+
 
 ---
 
