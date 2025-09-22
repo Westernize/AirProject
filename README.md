@@ -82,12 +82,12 @@
 🗄️ 데이터베이스 (Oracle)
 📌 sql/schema.sql 파일 참고
 
-주요 테이블
+##주요 테이블
 Member: 회원 정보
 
 Reservation: 예약 정보
 
-🖥️ 주요 기능
+##🖥️ 주요 기능
 👤 사용자
 회원가입 및 로그인
 
@@ -95,24 +95,22 @@ Reservation: 예약 정보
 
 예약 확인 및 취소
 
-🔑 관리자(Admin)
+##🔑 관리자(Admin)
 회원 관리 (조회/수정/삭제)
 
 예약 관리 (조회/삭제)
 
 통계 확인 (회원 수, 예약 건수)
 
-🚀 실행 방법
+##🚀 실행 방법
 저장소 클론
 
 bash
-코드 복사
 git clone https://github.com/username/airline-reservation-system.git
 cd airline-reservation-system
 Oracle DB 설정
 
-sql
-코드 복사
+
 CONNECT system/password@localhost:1521/XE;
 @sql/schema.sql;
 Eclipse 설정
@@ -158,7 +156,6 @@ SQL과 JSP/Servlet 연동을 통해 웹 애플리케이션을 처음 구현해�
 MIT License
 
 pgsql
-코드 복사
 
 ---
 
