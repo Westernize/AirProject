@@ -28,7 +28,7 @@
 ---
 
 ## 📂 프로젝트 구조
-'''
+```text
 airline-reservation-system
 ├─ src
 │  └─ main
