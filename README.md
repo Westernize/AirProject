@@ -28,6 +28,7 @@
 ---
 
 ## 📂 프로젝트 구조
+'''
 airline-reservation-system
 ├─ src
 │  └─ main
@@ -85,7 +86,7 @@ airline-reservation-system
 │  └─ screenshots/
 ├─ README.md
 └─ LICENSE
-tree -L 3 -I 'target|.git'
+'''
 
 ---
 
