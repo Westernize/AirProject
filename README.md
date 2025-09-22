@@ -19,7 +19,7 @@
 - **언어**: Java (JDK 17 기준)  
 - **DBMS**: Oracle Database 11g / 19c  
 - **IDE**: Eclipse (Dynamic Web Project)  
-- **WAS**: Apache Tomcat 9.0  
+- **WAS**: Apache Tomcat 11.0  
 - **라이브러리**: JDBC (ojdbc8.jar), JSP, Servlet  
 - **Front-end**: JSP, CSS  
 - **형상 관리**: GitHub  
