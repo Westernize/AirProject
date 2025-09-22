@@ -19,7 +19,7 @@
 - **언어**: Java (JDK 17 기준)  
 - **DBMS**: Oracle Database 11g / 19c  
 - **IDE**: Eclipse (Dynamic Web Project)  
-- **WAS**: Apache Tomcat 11.0  
+- **WAS**: Apache Tomcat 9 / 11  
 - **라이브러리**: JDBC (ojdbc8.jar), JSP, Servlet  
 - **Front-end**: JSP, CSS  
 - **형상 관리**: GitHub  
@@ -33,22 +33,22 @@
  ┃ ┣ 📂 dao
  ┃ ┃ ┗ MemberDAO.java
  ┃ ┣ 📂 servlet
+ ┃ ┃ ┣ LoginServlet.java
+ ┃ ┃ ┣ RegisterServlet.java
+ ┃ ┃ ┣ ReservationServlet.java
+ ┃ ┃ ┣ MyReservationsServlet.java
  ┃ ┃ ┣ cancelReservation.java
+ ┃ ┃ ┣ ManageUsersServlet.java
+ ┃ ┃ ┣ ManageReservationsServlet.java
+ ┃ ┃ ┣ UpdateProfileServlet.java
  ┃ ┃ ┣ DeleteAccountServlet.java
  ┃ ┃ ┣ DeleteReservationServlet.java
  ┃ ┃ ┣ DeleteUserServlet.java
  ┃ ┃ ┣ EditUserServlet.java
  ┃ ┃ ┣ InquiryServlet.java
- ┃ ┃ ┣ LoginServlet.java
  ┃ ┃ ┣ LogoutServlet.java
- ┃ ┃ ┣ ManageReservationsServlet.java
- ┃ ┃ ┣ ManageUsersServlet.java
  ┃ ┃ ┣ Member.java
- ┃ ┃ ┣ MyReservationsServlet.java
- ┃ ┃ ┣ RegisterServlet.java
- ┃ ┃ ┣ ReservationServlet.java
- ┃ ┃ ┣ ReservationServlet1.java
- ┃ ┃ ┗ UpdateProfileServlet.java
+ ┃ ┃ ┗ ReservationServlet1.java
  ┃ ┣ 📂 util
  ┃ ┃ ┗ DBUtil.java
  ┣ 📂 webapp
@@ -80,46 +80,41 @@
  ┣ README.md
  ┗ LICENSE
 🗄️ 데이터베이스 (Oracle)
----
 📌 sql/schema.sql 파일 참고
----
-주요 테이블
 
+주요 테이블
 Member: 회원 정보
 
 Reservation: 예약 정보
----
+
 🖥️ 주요 기능
 👤 사용자
-
 회원가입 및 로그인
 
 항공편 검색 (출발/도착지, 날짜, 시간, 항공편명)
 
 예약 확인 및 취소
----
-🔑 관리자(Admin)
 
+🔑 관리자(Admin)
 회원 관리 (조회/수정/삭제)
 
 예약 관리 (조회/삭제)
 
 통계 확인 (회원 수, 예약 건수)
----
-🚀 실행 방법
 
+🚀 실행 방법
 저장소 클론
 
+bash
+코드 복사
 git clone https://github.com/username/airline-reservation-system.git
 cd airline-reservation-system
-
----
 Oracle DB 설정
 
+sql
+코드 복사
 CONNECT system/password@localhost:1521/XE;
 @sql/schema.sql;
-
----
 Eclipse 설정
 
 Dynamic Web Project 생성
@@ -130,14 +125,13 @@ lib/ojdbc8.jar 등록
 
 Tomcat 배포
 
-Eclipse → Run on Server (Tomcat 9.0)
+Eclipse → Run on Server (Tomcat)
 
 접속
 
 http://localhost:8080/airline-reservation-system/main.jsp
----
-🎥 시연 화면
 
+🎥 시연 화면
 메인 페이지: 항공편 검색
 
 회원가입 & 로그인: DB 연동
@@ -147,9 +141,8 @@ http://localhost:8080/airline-reservation-system/main.jsp
 관리자(Admin): 회원 관리/예약 관리/통계
 
 👉 docs/screenshots/ 에 캡처 이미지 첨부 권장
----
-🔧 추후 개선사항
 
+🔧 추후 개선사항
 관리자 예약 수정 기능
 
 DB NULL 값 처리 보완
@@ -157,15 +150,15 @@ DB NULL 값 처리 보완
 결제 및 좌석 예약 기능
 
 UI/UX 개선
----
+
 💡 프로젝트 소감
-
 SQL과 JSP/Servlet 연동을 통해 웹 애플리케이션을 처음 구현해보며 많은 어려움이 있었지만, 팀원과 협업하여 완성할 수 있었습니다. Oracle DB와 웹 환경을 연결하는 실무 감각을 배울 수 있었으며, 프로젝트 완성에 큰 보람을 느꼈습니다.
----
-📜 라이선스
 
+📜 라이선스
 MIT License
 
+pgsql
+코드 복사
 
 ---
 
@@ -195,9 +188,6 @@ VALUES ('kim', 'abcd', '김철수', '010-9876-5432', 'kim@test.com');
 
 COMMIT;
 
--- 확인
-SELECT * FROM Member;
-
 --------------------------------------------------------
 -- 예약(Reservation) 테이블
 --------------------------------------------------------
@@ -221,6 +211,3 @@ INSERT INTO Reservation(userid, departure, arrival, flight_date, flight_time, fl
 VALUES ('kim', 'Busan', 'Beijing', TO_DATE('2025-09-12', 'YYYY-MM-DD'), '15:00', 'OZ456');
 
 COMMIT;
-
--- 확인
-SELECT * FROM Reservation;
