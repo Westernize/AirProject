@@ -89,7 +89,6 @@ airline-reservation-system
 
 
 ---
-```text
 ## 🗄️ 데이터베이스 (Oracle)
 ### 주요 테이블
 - **Member:** 회원 정보
