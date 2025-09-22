@@ -32,7 +32,6 @@ Front-end: JSP, CSS
 
 형상 관리: GitHub
 
-📂 프로젝트 구조
 airline-reservation-system
  ┣ src/main/java
  ┃ ┣ dao
@@ -84,6 +83,7 @@ airline-reservation-system
  ┃ ┗ screenshots/
  ┣ README.md
  ┗ LICENSE
+
 
 🗄️ 데이터베이스 (Oracle)
 주요 테이블
