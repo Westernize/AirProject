@@ -1,38 +1,43 @@
-# ✈️ 항공권 예약 시스템 (Airline Ticket Reservation System)
+✈️ Airline Ticket Reservation System
+📌 프로젝트 소개
 
-## 📌 프로젝트 소개
-이 프로젝트는 **Java Servlet & JSP + Oracle Database** 기반으로 구현된 항공권 예약 시스템입니다.  
-사용자는 회원가입 및 로그인 후 항공편을 조회하고 예약/취소할 수 있으며, 관리자는 회원과 예약 관리 기능을 수행할 수 있습니다.  
+이 프로젝트는 Java Servlet & JSP + Oracle Database 기반의 항공권 예약 시스템입니다.
+사용자는 회원가입과 로그인 후 항공편 조회, 예약, 취소가 가능하며, 관리자는 회원 및 예약 관리를 수행할 수 있습니다.
 
----
+👨‍👩‍👦 팀 소개
 
-## 👨‍👩‍👦 팀 소개
-- **팀명**: 5조
-- **팀원 및 역할**
-  - 🛠️ **이건해**: JSP 페이지 구성, UI 설계  
-  - 🗄️ **김찬형**: Oracle DB 설계 및 메인 페이지 구현  
-  - 💻 **이희찬**: 예약/회원 관리, 관리자(Admin) 기능 구현  
+팀명: 5조
 
----
+팀원 및 역할:
 
-## ⚙️ 개발 환경
-- **언어**: Java (JDK 17 기준)  
-- **DBMS**: Oracle Database 11g / 19c  
-- **IDE**: Eclipse (Dynamic Web Project)  
-- **WAS**: Apache Tomcat 9 / 11  
-- **라이브러리**: JDBC (ojdbc8.jar), JSP, Servlet  
-- **Front-end**: JSP, CSS  
-- **형상 관리**: GitHub  
+🛠️ 이건해: JSP 페이지 구성, UI 설계
 
----
+🗄️ 김찬형: Oracle DB 설계 및 메인 페이지 구현
 
-## 📂 프로젝트 구조
-```plaintext
-📦 airline-reservation-system
- ┣ 📂 src/main/java
- ┃ ┣ 📂 dao
+💻 이희찬: 예약/회원 관리, 관리자(Admin) 기능 구현
+
+⚙️ 개발 환경
+
+언어: Java (JDK 17)
+
+DBMS: Oracle Database 11g / 19c
+
+IDE: Eclipse (Dynamic Web Project)
+
+WAS: Apache Tomcat 9 / 11
+
+라이브러리: JDBC (ojdbc8.jar), JSP, Servlet
+
+Front-end: JSP, CSS
+
+형상 관리: GitHub
+
+📂 프로젝트 구조
+airline-reservation-system
+ ┣ src/main/java
+ ┃ ┣ dao
  ┃ ┃ ┗ MemberDAO.java
- ┃ ┣ 📂 servlet
+ ┃ ┣ servlet
  ┃ ┃ ┣ LoginServlet.java
  ┃ ┃ ┣ RegisterServlet.java
  ┃ ┃ ┣ ReservationServlet.java
@@ -49,11 +54,11 @@
  ┃ ┃ ┣ LogoutServlet.java
  ┃ ┃ ┣ Member.java
  ┃ ┃ ┗ ReservationServlet1.java
- ┃ ┣ 📂 util
+ ┃ ┣ util
  ┃ ┃ ┗ DBUtil.java
- ┣ 📂 webapp
- ┃ ┣ 📂 META-INF
- ┃ ┣ 📂 WEB-INF
+ ┣ webapp
+ ┃ ┣ META-INF
+ ┃ ┣ WEB-INF
  ┃ ┃ ┣ AdminDashboard.jsp
  ┃ ┃ ┣ EditProfile.jsp
  ┃ ┃ ┣ EditUser.jsp
@@ -71,48 +76,53 @@
  ┃ ┃ ┣ signup.jsp
  ┃ ┃ ┣ style.css
  ┃ ┃ ┗ success.jsp / test.css
- ┣ 📂 sql
+ ┣ sql
  ┃ ┗ schema.sql
- ┣ 📂 docs
+ ┣ docs
  ┃ ┣ erd.png
  ┃ ┣ schedule.png
  ┃ ┗ screenshots/
  ┣ README.md
  ┗ LICENSE
-🗄️ 데이터베이스 (Oracle)
-📌 sql/schema.sql 파일 참고
 
-##주요 테이블
+🗄️ 데이터베이스 (Oracle)
+주요 테이블
+
 Member: 회원 정보
 
 Reservation: 예약 정보
 
-##🖥️ 주요 기능
+🖥️ 주요 기능
 👤 사용자
+
 회원가입 및 로그인
 
 항공편 검색 (출발/도착지, 날짜, 시간, 항공편명)
 
 예약 확인 및 취소
 
-##🔑 관리자(Admin)
+🔑 관리자(Admin)
+
 회원 관리 (조회/수정/삭제)
 
 예약 관리 (조회/삭제)
 
 통계 확인 (회원 수, 예약 건수)
 
-##🚀 실행 방법
+🚀 실행 방법
+
 저장소 클론
 
-bash
 git clone https://github.com/username/airline-reservation-system.git
 cd airline-reservation-system
-Oracle DB 설정
 
+
+Oracle DB 설정
 
 CONNECT system/password@localhost:1521/XE;
 @sql/schema.sql;
+
+
 Eclipse 설정
 
 Dynamic Web Project 생성
@@ -125,11 +135,10 @@ Tomcat 배포
 
 Eclipse → Run on Server (Tomcat)
 
-접속
-
-http://localhost:8080/airline-reservation-system/main.jsp
+접속: http://localhost:8080/airline-reservation-system/main.jsp
 
 🎥 시연 화면
+
 메인 페이지: 항공편 검색
 
 회원가입 & 로그인: DB 연동
@@ -138,9 +147,10 @@ http://localhost:8080/airline-reservation-system/main.jsp
 
 관리자(Admin): 회원 관리/예약 관리/통계
 
-👉 docs/screenshots/ 에 캡처 이미지 첨부 권장
+📂 docs/screenshots/에 캡처 이미지 첨부 권장
 
 🔧 추후 개선사항
+
 관리자 예약 수정 기능
 
 DB NULL 값 처리 보완
@@ -150,18 +160,15 @@ DB NULL 값 처리 보완
 UI/UX 개선
 
 💡 프로젝트 소감
-SQL과 JSP/Servlet 연동을 통해 웹 애플리케이션을 처음 구현해보며 많은 어려움이 있었지만, 팀원과 협업하여 완성할 수 있었습니다. Oracle DB와 웹 환경을 연결하는 실무 감각을 배울 수 있었으며, 프로젝트 완성에 큰 보람을 느꼈습니다.
+
+SQL과 JSP/Servlet 연동을 통해 웹 애플리케이션을 처음 구현해보며 많은 어려움이 있었지만, 팀원과 협업하여 완성할 수 있었습니다.
+Oracle DB와 웹 환경을 연결하는 실무 감각을 배울 수 있었으며, 프로젝트 완성에 큰 보람을 느꼈습니다.
 
 📜 라이선스
+
 MIT License
 
-pgsql
-
----
-
-# 📜 sql/schema.sql
-
-```sql
+📜 SQL 스키마 (sql/schema.sql)
 -- 현재 접속한 사용자 확인
 SELECT USER FROM dual;
 
@@ -206,5 +213,3 @@ VALUES ('hong', 'Seoul', 'Tokyo', TO_DATE('2025-09-10', 'YYYY-MM-DD'), '10:00', 
 
 INSERT INTO Reservation(userid, departure, arrival, flight_date, flight_time, flight_name)
 VALUES ('kim', 'Busan', 'Beijing', TO_DATE('2025-09-12', 'YYYY-MM-DD'), '15:00', 'OZ456');
-
-COMMIT;
